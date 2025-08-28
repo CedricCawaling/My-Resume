@@ -1,0 +1,154 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    text-align: center;
+      margin-bottom: 2.5rem;
+}
+
+header p{
+      color: #333;
+}
+header h1 {
+  font-size: 1.8rem; /* ~28.8px */
+  line-height: 1.2;  /* tighter line spacing */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background: #f9f9f9;
+    text-align: justify;
+}
+
+/* === Layout === */
+.container {
+    display: grid;
+    grid-template-columns: 1fr 2fr; 
+    min-height: 100vh; 
+} 
+
+/* Left column */
+.left {
+    background: #2c3e50;
+    color: white;
+    padding: 2rem 1.5rem;
+    
+}
+
+.left h1, .left h2, .left p, .left li, .left strong {
+    color: white;
+}
+.left img { width: 200px;        
+  height: auto;        
+  border-radius: 15%;  
+  display: block;      
+  margin: 0 auto 1rem; 
+  border: 3px solid #333;
+
+}
+.right {
+    padding: 2rem 1.5rem;
+}
+
+.left, .right {
+  height: 100vh;          /* full screen height */
+  overflow-y: auto;       /* enable vertical scrolling */
+  overflow-x: hidden;     /* hide horizontal scrollbar */
+}
+
+section {
+  margin-bottom: 2rem;
+}
+.section-heading {
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #2c3e50; 
+  font-size: 1.8rem;
+}
+
+h2 {
+    margin-bottom: 0.75rem;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 0.3rem;
+    color: #2c3e50;
+}
+
+
+ul {
+    margin: 0.5rem 0 1rem 1.2rem;
+}
+
+.left section{
+  margin-bottom: 2rem;
+}
+
+/* Projects*/
+.project {
+    background: white;
+    margin-bottom: 1rem;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Contact links */
+#contact a {
+    color: #2980b9;
+    font-weight: bold;
+    text-decoration: none;
+}
+.project-content {
+  display: none; /* hidden by default */
+  margin-top: 0.5rem;
+
+}
+
+.project-title {
+  cursor: pointer;
+  background: #34495e;
+  color: white;
+  padding: 0.5rem;
+  border-radius: 5px;
+}
+
+.project-title:hover {
+  background: #2980b9;
+}
+.project-content img{
+    width: 100%;
+    height: auto;
+}
+.project button{
+    font-size: medium;
+    padding: 2px;
+    background-color: #2c3e50;
+    color: #f9f9f9;
+}
+#contact a:hover {
+    text-decoration: underline;
+}
+#contact p {
+  margin: 0.5rem 0;
+  font-size: 1rem;
+}
+
+#contact i {
+  color: #2c3e50; /* matches your blue theme */
+  margin-right: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr; /* stack */
+    }
+
+    .left, .right {
+        padding: 1.5rem;
+    }
+}
+
